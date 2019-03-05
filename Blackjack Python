@@ -1,0 +1,47 @@
+import random
+
+
+Hand1 = random.randint (1,11)
+Hand2 = random.randint (1,11)
+# Ask if player wants another card
+Hand3 = random.randint (1,11)
+# Ask again
+Hand4 = random.randint (1,11)
+
+
+
+# Total Points need to add card values
+
+TotalHand = Hand1 + Hand2
+
+Blackjack = 21
+
+# User interface print statements
+
+print(Hand1)
+print(Hand2)
+print (TotalHand)
+choice = input("Do you want another card? (y/n)")
+if choice == "y":
+    print(Hand3)
+    TotalHand = TotalHand + Hand3
+    print(TotalHand)
+else:
+    print("Your total is:" , TotalHand)
+
+choice = input("Do you want another card? (y/n)")
+if choice == "y":
+    print(Hand4)
+    TotalHand = TotalHand + Hand4
+    print("Your total is:" , TotalHand)
+
+else:
+    print("Your total is:" , TotalHand)
+
+if TotalHand > 21:
+    print ("you lose")
+
+if TotalHand == 21:
+    print (TotalHand ,"Blackjack")
+
+
